@@ -1,0 +1,19 @@
+
+boardsize 5
+clear_board
+timelimit 100
+play b a1
+play w a5
+play b e1
+play w e5
+play b e3
+play w e2
+play b c5
+play w d4
+play b c3
+play w b2
+play b c2
+30 solve
+#?[b]
+
+

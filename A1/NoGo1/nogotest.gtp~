@@ -1,0 +1,54 @@
+#nogo test file to illustrate the difference between Go and NoGo
+#This test is written for NoGo
+
+boardsize 5
+clear_board
+
+play b a1
+10 legal_moves w
+#? [a2 a3 a4 a5 b1 b2 b3 b4 b5 c1 c2 c3 c4 c5 d1 d2 d3 d4 d5 e1 e2 e3 e4 e5]
+
+play w a2
+20 legal_moves b
+#? [a3 a4 a5 b1 b2 b3 b4 b5 c1 c2 c3 c4 c5 d1 d2 d3 d4 d5 e1 e2 e3 e4 e5]
+
+30 play w b1
+#? [illegal move: b1 capture]
+
+40 legal_moves b
+#? [a3 a4 a5 b1 b2 b3 b4 b5 c1 c2 c3 c4 c5 d1 d2 d3 d4 d5 e1 e2 e3 e4 e5]
+
+play b b1
+50 legal_moves w
+#? [a3 a4 a5 b2 b3 b4 b5 c1 c2 c3 c4 c5 d1 d2 d3 d4 d5 e1 e2 e3 e4 e5]
+
+play w b2
+60 legal_moves b
+#? [a3 a4 a5 b3 b4 b5 c1 c2 c3 c4 c5 d1 d2 d3 d4 d5 e1 e2 e3 e4 e5]
+
+play b c2
+70 legal_moves w
+#? [a3 a4 a5 b3 b4 b5 c3 c4 c5 d1 d2 d3 d4 d5 e1 e2 e3 e4 e5]
+
+play b d1
+80 legal_moves w
+#? [a3 a4 a5 b3 b4 b5 c3 c4 c5 d2 d3 d4 d5 e1 e2 e3 e4 e5]
+
+play b e2
+90 legal_moves w
+#? [a3 a4 a5 b3 b4 b5 c3 c4 c5 d2 d3 d4 d5 e3 e4 e5]
+
+100 play w e1
+#? [illegal move: w e1 suicide]
+
+110 play w e2
+#? [illegal move: w e2 occupied]
+
+120 play w
+#? [illegal move: w wrong number of arguments]
+
+130 play c a2
+#? [illegal move: c a2 wrong color]
+
+140 play w c99
+#? [illegal move: w c99 wrong coordinate]

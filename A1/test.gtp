@@ -1,0 +1,38 @@
+10 boardsize 7
+#? []
+
+20 clear_board
+#? []
+
+30 play b b1
+#? []
+
+40 play w pass
+#? [illegal move: w pass wrong coordinate]
+
+50 play w b1
+#? [illegal move: w b1 occupied]
+
+60 play c3
+#? [illegal move: c3 wrong number of arguments]
+
+70 play r c3
+#? [illegal move: r c3 wrong color]
+
+80 play w c99
+#? [illegal move: w c99 wrong coordinate]
+
+90 play w a1
+#? []
+
+100 play b a2
+#? [illegal move: b a2 capture]
+
+110 play b b2
+#? []
+
+120 play b a3
+#? []
+
+130 play w a2
+#? [illegal move: w a2 suicide]

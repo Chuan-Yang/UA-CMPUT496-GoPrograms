@@ -1,0 +1,14 @@
+boardsize 5
+play b e5
+play w b5
+play b b4
+play w c4
+play b e4
+play w c3
+play b b3
+play w a3
+play b a2
+play w a4
+showboard
+policy_moves
+

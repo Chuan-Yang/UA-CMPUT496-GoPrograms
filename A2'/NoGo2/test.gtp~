@@ -1,0 +1,10 @@
+boardsize 3
+clear_board
+play b a3
+play w c3
+play b a2
+play w b3
+play b b2
+play w c1
+30 solve
+#?[b b1]
